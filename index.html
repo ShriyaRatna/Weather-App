@@ -12,6 +12,11 @@
             <input type="text" name="search-city" id="search-city" placeholder="Enter City name" spellcheck="false">
             <button><img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/search-512.png"></button>
         </div>
+        <div class="error">
+            <p>
+                Invalid City Name
+            </p>
+        </div>
         <div class="weather">
             <img src="https://static.vecteezy.com/system/resources/thumbnails/010/989/526/small_2x/rainy-weather-3d-rendering-isolated-on-transparent-background-ui-ux-icon-design-web-and-app-trend-png.png" class="weather-icon">
             <h1 class="temp">22°C</h1>
@@ -35,17 +40,6 @@
         </div>
     </div>
 
-<script>
-    const apiKey = "048eec1081c430130331d9cf18b742c5";
-    const apiUrl = "https://api.openweathermap.org/data/2.5/weather?&units=metric&q=germany";
-    async function checkWeather(){
-        const response = await fetch(apiUrl + `&appid=${apiKey}`);
-        var data = await response.json();
-
-        console.log(data);
-    }
-
-    checkWeather();
-</script>
+<script src="/script.js"></script>
 </body>
 </html>
